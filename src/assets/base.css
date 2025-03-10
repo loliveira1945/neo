@@ -126,7 +126,11 @@ button {
   transition: background-color 0.3s, color 0.3s;
   background-color: var(--btn-bg-light);
   color: var(--btn-text-light);
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  box-shadow: var(--vt-c-shadow-dark);
+}
+
+header {
+  background-color: var(--vt-c-black);
 }
 
 @media (prefers-color-scheme: light) {
@@ -150,5 +154,9 @@ button {
   .card{
     background-color: var(--card-bg-dark);
     box-shadow: var(--vt-c-shadow-light);
+  }
+
+  header {
+    background-color: var(--vt-c-white);
   }
 }

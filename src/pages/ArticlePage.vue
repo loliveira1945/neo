@@ -1,9 +1,11 @@
 <template>
+  <div class="grid grid-cols-3 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center pt-[60px]">
     <ArticleCard
       v-for="article in articles"
       :key="article.id"
       :article="article"
     />
+  </div>
 </template>
 
 <script>

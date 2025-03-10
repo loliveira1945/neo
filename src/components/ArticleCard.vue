@@ -1,27 +1,27 @@
 <template>
-    <div class="card">
+    <div class="card h-fit">
         <img 
             :src="imageSrc" 
             :alt="article.title" 
-            class="w-full h-48 object-cover"
+            class="w-full h-48 object-cover object-top"
         />
         <div class="flex flex-col justify-center items-center px-6 py-4">
-            <div class="font-bold text-xl mb-2">{{ article.title }}</div>
+            <div class="font-bold text-center text-xl mb-2 h-16">{{ article.title }}</div>
             <p class="text-base text-center py-4">
                 {{ article.overview }}
             </p>
         </div>
         <div class="px-6 py-4">
-            <Button>
-                Ler mais {{ article.id }}
-            </Button>
+            <ButtonCustom>
+                Ler mais
+            </ButtonCustom>
         </div>
     </div>
 </template>
 
 <script>
-    import Button from './Button.vue';
-    import defaultImage from '../assets/images/spiderman2.webp';
+    import ButtonCustom from './ButtonCustom.vue';
+    import defaultImage from '../assets/images/spiderman.webp';
 
     export default {
         name: 'ArticleCard',
@@ -33,13 +33,16 @@
         },
 
         components: {
-            Button
+            ButtonCustom
         },
 
         computed: {
             imageSrc() {
-                return this.article.poster_path || defaultImage;
+                if (this.article.poster_path) {
+                    return `https://image.tmdb.org/t/p/original/${this.article.poster_path}`;
+                }
+                return defaultImage;
             },
-        },
+        }
     }
 </script>
