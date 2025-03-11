@@ -1,5 +1,5 @@
 <template>
-    <div class="card h-fit">
+    <div class="card h-fit w-full">
         <img 
             :src="imageSrc" 
             :alt="article.title" 
