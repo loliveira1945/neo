@@ -1,5 +1,5 @@
 <template>
-  <header class="flex justify-around items-center w-full h-15 p-0 fixed top-0">
+  <header class="flex justify-around items-center w-full h-16 p-0 fixed top-0">
     <img :src="imageSrc" alt="Logo Neo" class="h-20 w-20"/>
     <ButtonCustom>Artigos</ButtonCustom>
   </header>

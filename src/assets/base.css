@@ -1,6 +1,6 @@
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
-  --vt-c-white: #ffffff;
+  --vt-c-white: #f5f5f5;
   --vt-c-white-soft: #f8f8f8;
   --vt-c-white-mute: #f2f2f2;
 
@@ -95,6 +95,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  background-color: var(--btn-bg-dark);
+  color: var(--btn-text-dark);
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -117,46 +128,38 @@ body {
   white-space: normal;
 }
 
-button {
-  padding: 10px 20px;
-  border-radius: 8px;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-  background-color: var(--btn-bg-light);
-  color: var(--btn-text-light);
-  box-shadow: var(--vt-c-shadow-dark);
-}
-
-header {
-  background-color: var(--vt-c-black);
-}
-
+/*QUANDO FOR MODO CLARO*/
 @media (prefers-color-scheme: light) {
-  button:hover {
-    background-color: var(--btn-bg-dark);
-    color: var(--btn-text-dark);
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  button {
-    background-color: var(--btn-bg-dark);
-    color: var(--btn-text-dark);
+  header, footer {
+    background-color: var(--vt-c-black);
+    color: var(--vt-c-white);
   }
 
   button:hover {
     background-color: var(--btn-bg-light);
     color: var(--btn-text-light);
   }
+}
+
+/*QUANDO FOR MODO ESCURO*/
+@media (prefers-color-scheme: dark) {
+  header, footer {
+    background-color: var(--vt-c-white);
+    color: var(--vt-c-black);
+  }
+
+  button {
+    background-color: var(--btn-bg-light);
+    color: var(--btn-text-light);
+  }
+
+  button:hover {
+    background-color: var(--btn-bg-dark);
+    color: var(--btn-text-dark);
+  }
 
   .card{
     background-color: var(--card-bg-dark);
     box-shadow: var(--vt-c-shadow-light);
-  }
-
-  header {
-    background-color: var(--vt-c-white);
   }
 }
