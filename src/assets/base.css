@@ -95,15 +95,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.button-card, .button-nav, .button-detail, .button-search  {
+.button-card, .button-detail, .button-search, .button-nav  {
   padding: 10px 20px;
   border-radius: 8px;
   border: none;
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
-  background-color: var(--btn-bg-dark);
-  color: var(--btn-text-dark);
 }
 
 .card {
@@ -140,12 +138,22 @@ body {
     color: var(--vt-c-white);
   }
 
-  .button-card:hover, .button-nav:hover, .button-search:hover {
+  .button-card, .button-detail, .button-search {
+    background-color: var(--btn-bg-dark);
+    color: var(--btn-text-dark);
+  }
+
+  .button-card:hover, .button-detail:hover, .button-search:hover {
     background-color: var(--btn-bg-light);
     color: var(--btn-text-light);
   }
 
-  .button-detail:hover {
+  .button-nav {
+    background-color: var(--btn-bg-light);
+    color: var(--btn-text-light);
+  }
+
+  .button-nav:hover {
     background-color: var(--btn-bg-dark);
     color: var(--btn-text-dark);
   }
@@ -158,29 +166,28 @@ body {
     color: var(--vt-c-black);
   }
 
-  .button-detail {
-    background-color: var(--btn-bg-dark);
-    color: var(--btn-text-dark);
-  }
-
-  .button-card, .button-nav, .button-search {
-    background-color: var(--btn-bg-light);
-    color: var(--btn-text-light);
-  }
-
-  .button-detail:hover {
-    background-color: var(--btn-bg-light);
-    color: var(--btn-text-light);
-  }
-
-  .button-card:hover, .button-nav:hover, .button-search:hover {
-    background-color: var(--btn-bg-dark);
-    color: var(--btn-text-dark);
-  }
-
   .card {
     background-color: var(--card-bg-dark);
     box-shadow: var(--vt-c-shadow-light);
+  }
+  .button-card, .button-detail, .button-search {
+    background-color: var(--btn-bg-light);
+    color: var(--btn-text-light);
+  }
+
+  .button-card:hover, .button-detail:hover, .button-search:hover {
+    background-color: var(--btn-bg-dark);
+    color: var(--btn-text-dark);
+  }
+
+  .button-nav {
+    background-color: var(--btn-bg-dark);
+    color: var(--btn-text-dark);
+  }
+
+  .button-nav:hover {
+    background-color: var(--btn-bg-light);
+    color: var(--btn-text-light);
   }
 
   .search {
