@@ -95,7 +95,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-button {
+.button-card, .button-nav, .button-detail, .button-search  {
   padding: 10px 20px;
   border-radius: 8px;
   border: none;
@@ -128,6 +128,11 @@ button {
   white-space: normal;
 }
 
+.search {
+  background-color: var(--vt-c-white);
+  color: var(--vt-c-black);
+}
+
 /*QUANDO FOR MODO CLARO*/
 @media (prefers-color-scheme: light) {
   header, footer {
@@ -135,9 +140,14 @@ button {
     color: var(--vt-c-white);
   }
 
-  button:hover {
+  .button-card:hover, .button-nav:hover, .button-search:hover {
     background-color: var(--btn-bg-light);
     color: var(--btn-text-light);
+  }
+
+  .button-detail:hover {
+    background-color: var(--btn-bg-dark);
+    color: var(--btn-text-dark);
   }
 }
 
@@ -148,18 +158,33 @@ button {
     color: var(--vt-c-black);
   }
 
-  button {
-    background-color: var(--btn-bg-light);
-    color: var(--btn-text-light);
-  }
-
-  button:hover {
+  .button-detail {
     background-color: var(--btn-bg-dark);
     color: var(--btn-text-dark);
   }
 
-  .card{
+  .button-card, .button-nav, .button-search {
+    background-color: var(--btn-bg-light);
+    color: var(--btn-text-light);
+  }
+
+  .button-detail:hover {
+    background-color: var(--btn-bg-light);
+    color: var(--btn-text-light);
+  }
+
+  .button-card:hover, .button-nav:hover, .button-search:hover {
+    background-color: var(--btn-bg-dark);
+    color: var(--btn-text-dark);
+  }
+
+  .card {
     background-color: var(--card-bg-dark);
     box-shadow: var(--vt-c-shadow-light);
+  }
+
+  .search {
+    background-color: var(--vt-c-black);
+    color: var(--vt-c-white);
   }
 }
