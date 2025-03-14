@@ -41,6 +41,7 @@
 <script>
   import ButtonCustom from '../components/ButtonCustom.vue';
   import SpinnerLoading from '../components/SpinnerLoading.vue';
+  import defaultImage from '../assets/images/spiderman.webp';
   import { mapState, mapActions } from 'vuex';
 
   export default {
@@ -62,7 +63,7 @@
       },
 
       imageSrc() {
-          if (this.article.poster_path) {
+          if (this.article.backdrop_path) {
             return `https://image.tmdb.org/t/p/original/${this.article.backdrop_path}`;
           }
           return defaultImage;
