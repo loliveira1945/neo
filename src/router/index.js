@@ -4,7 +4,7 @@ import ArticleDetail from '@/pages/ArticleDetail.vue'
 
 const routes = [
   { path: '/', component: ArticlePage },
-  { path: '/movie/:id', component: ArticleDetail, props: true }
+  { path: '/article/:id', component: ArticleDetail, props: true }
 ]
 
 const router = createRouter({
