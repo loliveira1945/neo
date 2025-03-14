@@ -12,7 +12,7 @@
             </p>
         </div>
         <div class="px-6 py-4">
-            <router-link :to="`/movie/${article.id}`">
+            <router-link :to="`/article/${article.id}`">
                 <ButtonCustom class="button-card">
                     Ler mais
                 </ButtonCustom>
