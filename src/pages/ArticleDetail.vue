@@ -16,7 +16,7 @@
         class="w-fit h-96 object-cover object-top rounded-lg"
       />
       <h1 class="w-fit py-5">{{ article.title }}</h1>
-      <p class="w-fit py-5">{{ article.overview }}</p>
+      <p class="w-fit py-5">{{ overviewMovie }}</p>
       <div class="w-full flex justify-evenly py-5">
         <router-link :to="`/`">
           <ButtonCustom class="button-detail">
@@ -41,7 +41,7 @@
 <script>
   import ButtonCustom from '../components/ButtonCustom.vue';
   import SpinnerLoading from '../components/SpinnerLoading.vue';
-  import defaultImage from '../assets/images/spiderman.webp';
+  import defaultImage from '../assets/images/not-image.png';
   import { mapState, mapActions } from 'vuex';
 
   export default {
@@ -67,6 +67,13 @@
             return `https://image.tmdb.org/t/p/original/${this.article.backdrop_path}`;
           }
           return defaultImage;
+      },
+
+      overviewMovie() {
+        if(this.article.overview) {
+          return this.article.overview
+        }
+        return 'FILME SEM DESCRIÇÃO'
       }
     },
 

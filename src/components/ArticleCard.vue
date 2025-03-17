@@ -8,7 +8,7 @@
         <div class="flex flex-col justify-center items-center px-6 py-4 w-full h-48">
             <div class="font-bold text-center text-xl mb-2 h-16">{{ article.title }}</div>
             <p class="text-base text-center py-4">
-                {{ article.overview }}
+                {{ overviewMovie }}
             </p>
         </div>
         <div class="px-6 py-4">
@@ -23,7 +23,7 @@
 
 <script>
     import ButtonCustom from './ButtonCustom.vue';
-    import defaultImage from '../assets/images/spiderman.webp';
+    import defaultImage from '../assets/images/not-image.png';
 
     export default {
         name: 'ArticleCard',
@@ -45,6 +45,13 @@
                 }
                 return defaultImage;
             },
+
+            overviewMovie() {
+                if(this.article.overview) {
+                    return this.article.overview
+                }
+                return 'FILME SEM DESCRIÇÃO'
+            }
         }
     }
 </script>
